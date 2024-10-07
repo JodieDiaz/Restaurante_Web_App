@@ -1,131 +1,105 @@
-/* Importar Tailwind CSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Estilos Globales */
+/* Estilos generales */
 body {
-    background-color: #f9f9f9; /* Fondo blanco claro */
-    color: #000; /* Texto negro */
-    font-family: 'Arial', sans-serif; /* Fuente básica */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Color de fondo */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #000; /* Negro para los encabezados */
+.admin-container {
+  max-width: 800px; /* Ancho máximo de la página */
+  margin: 50px auto; /* Centrando la página vertical y horizontalmente */
+  padding: 20px;
+  background: #ffffff; /* Color de fondo del contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: all 0.3s ease; /* Transiciones suaves */
 }
 
-a {
-    color: #000; /* Negro para enlaces */
-    text-decoration: none; /* Sin subrayado */
+.admin-container:hover {
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
 }
 
-a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
+h1 {
+  text-align: center; /* Centrar el título */
+  color: #333; /* Color del texto del título */
+  font-size: 2rem; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-header {
-    background-color: #f9f9f9; /* Fondo blanco claro para el encabezado */
-    padding: 1rem; /* Espaciado en el encabezado */
-    text-align: center; /* Centrar texto */
+.form-container {
+  display: flex; /* Usar Flexbox para centrar el formulario */
+  justify-content: center; /* Centrando horizontalmente */
+  align-items: center; /* Centrando verticalmente */
+  margin-top: 20px; /* Espacio superior para el formulario */
 }
 
-footer {
-    background-color: #f9f9f9; /* Fondo blanco claro para el pie de página */
-    color: #000; /* Texto negro en el pie de página */
-    text-align: center; /* Centrar texto en el pie de página */
-    padding: 1rem; /* Espaciado en el pie de página */
+.form-container form {
+  width: 100%; /* Hacer que el formulario use todo el ancho del contenedor */
+  max-width: 600px; /* Ancho máximo del formulario */
+  background-color: #f9f9f9; /* Fondo del formulario */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
 }
 
-.menu-item {
-    background-color: #fff; /* Fondo blanco para los elementos del menú */
-    color: #000; /* Texto negro para los elementos del menú */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 1rem; /* Espaciado interno */
-    margin: 0.5rem 0; /* Espaciado externo */
-    transition: background-color 0.3s; /* Transición suave */
+label {
+  display: block; /* Asegurarse de que las etiquetas ocupen toda la línea */
+  margin-bottom: 8px; /* Espacio debajo de las etiquetas */
+  color: #444; /* Color del texto de las etiquetas */
+  font-weight: bold; /* Negrita en las etiquetas */
 }
 
-.menu-item:hover {
-    background-color: #f1f1f1; /* Color de fondo más claro al pasar el mouse */
+input,
+textarea {
+  width: 100%; /* Ancho completo de los campos */
+  padding: 12px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espacio entre los campos */
+  border: 1px solid #ccc; /* Borde suave */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco para los campos */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: border 0.2s; /* Transición suave para el borde */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffcc00; /* Color del borde en foco */
+  outline: none; /* Sin contorno adicional en foco */
 }
 
 .btn {
-    background-color: #fff; /* Botones en blanco */
-    color: #000; /* Texto negro en botones */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 0.5rem 1rem; /* Espaciado en botones */
-    cursor: pointer; /* Cursor de puntero */
-    transition: background-color 0.3s; /* Transición suave */
+  width: 100%; /* Botón ocupa todo el ancho */
+  padding: 12px; /* Espaciado interno */
+  margin-top: 10px; /* Espacio arriba del botón */
+  background-color: #ffcc00; /* Color de fondo del botón */
+  color: #333; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
 }
 
 .btn:hover {
-    background-color: #f1f1f1; /* Color de fondo más claro al pasar el mouse */
+  background-color: #e6b800; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Ligera elevación del botón */
 }
 
-.card {
-    background-color: #fff; /* Fondo blanco para tarjetas */
-    color: #000; /* Texto negro en tarjetas */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 8px; /* Bordes redondeados en tarjetas */
-    padding: 1rem; /* Espaciado interno en tarjetas */
-    margin: 1rem 0; /* Espaciado externo en tarjetas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+.btn:active {
+  transform: translateY(0); /* Volver a la posición original al hacer clic */
 }
 
-/* Estilos del formulario */
-.form-container {
-    max-width: 600px; /* Ancho máximo del formulario */
-    margin: 2rem auto; /* Centrar el formulario en la página */
-    padding: 1.5rem; /* Espaciado interno */
-    background-color: #fff; /* Fondo blanco para el formulario */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+/* Estilos para el mensaje de éxito/error (si lo deseas agregar) */
+.success-message {
+  color: #28a745; /* Verde */
+  margin: 15px 0; /* Espacio arriba y abajo */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrar texto */
 }
 
-/* Estilo para las etiquetas */
-label {
-    color: #000; /* Color de texto negro para etiquetas */
-    font-weight: bold; /* Negrita para etiquetas */
-}
-
-/* Estilo para los inputs y textarea */
-input[type="text"],
-input[type="number"],
-textarea {
-    width: 100%; /* Ancho completo */
-    padding: 0.5rem; /* Espaciado interno */
-    margin-bottom: 1rem; /* Espaciado inferior */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px; /* Bordes redondeados */
-    background-color: #fff; /* Fondo blanco para campos de entrada */
-    color: #000; /* Texto negro en campos de entrada */
-    transition: border-color 0.3s; /* Transición suave para el borde */
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-    outline: none; /* Sin contorno */
-    border-color: #000; /* Cambio de color del borde al enfocar */
-}
-
-/* Estilo para el botón */
-button {
-    width: 100%; /* Ancho completo para el botón */
-    padding: 0.75rem; /* Espaciado interno en el botón */
-    background-color: #fff; /* Fondo blanco para el botón */
-    color: #000; /* Texto negro */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de puntero */
-    transition: background-color 0.3s; /* Transición suave */
-}
-
-button:hover {
-    background-color: #f1f1f1; /* Color más claro al pasar el mouse */
+.error-message {
+  color: #dc3545; /* Rojo */
+  margin: 15px 0; /* Espacio arriba y abajo */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrar texto */
 }
