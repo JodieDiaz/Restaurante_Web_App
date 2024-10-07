@@ -1,0 +1,131 @@
+/* Importar Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos Globales */
+body {
+    background-color: #f9f9f9; /* Fondo blanco claro */
+    color: #000; /* Texto negro */
+    font-family: 'Arial', sans-serif; /* Fuente básica */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000; /* Negro para los encabezados */
+}
+
+a {
+    color: #000; /* Negro para enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+header {
+    background-color: #f9f9f9; /* Fondo blanco claro para el encabezado */
+    padding: 1rem; /* Espaciado en el encabezado */
+    text-align: center; /* Centrar texto */
+}
+
+footer {
+    background-color: #f9f9f9; /* Fondo blanco claro para el pie de página */
+    color: #000; /* Texto negro en el pie de página */
+    text-align: center; /* Centrar texto en el pie de página */
+    padding: 1rem; /* Espaciado en el pie de página */
+}
+
+.menu-item {
+    background-color: #fff; /* Fondo blanco para los elementos del menú */
+    color: #000; /* Texto negro para los elementos del menú */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem; /* Espaciado interno */
+    margin: 0.5rem 0; /* Espaciado externo */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.menu-item:hover {
+    background-color: #f1f1f1; /* Color de fondo más claro al pasar el mouse */
+}
+
+.btn {
+    background-color: #fff; /* Botones en blanco */
+    color: #000; /* Texto negro en botones */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 0.5rem 1rem; /* Espaciado en botones */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn:hover {
+    background-color: #f1f1f1; /* Color de fondo más claro al pasar el mouse */
+}
+
+.card {
+    background-color: #fff; /* Fondo blanco para tarjetas */
+    color: #000; /* Texto negro en tarjetas */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados en tarjetas */
+    padding: 1rem; /* Espaciado interno en tarjetas */
+    margin: 1rem 0; /* Espaciado externo en tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos del formulario */
+.form-container {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 2rem auto; /* Centrar el formulario en la página */
+    padding: 1.5rem; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo para las etiquetas */
+label {
+    color: #000; /* Color de texto negro para etiquetas */
+    font-weight: bold; /* Negrita para etiquetas */
+}
+
+/* Estilo para los inputs y textarea */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 0.5rem; /* Espaciado interno */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco para campos de entrada */
+    color: #000; /* Texto negro en campos de entrada */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none; /* Sin contorno */
+    border-color: #000; /* Cambio de color del borde al enfocar */
+}
+
+/* Estilo para el botón */
+button {
+    width: 100%; /* Ancho completo para el botón */
+    padding: 0.75rem; /* Espaciado interno en el botón */
+    background-color: #fff; /* Fondo blanco para el botón */
+    color: #000; /* Texto negro */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #f1f1f1; /* Color más claro al pasar el mouse */
+}
