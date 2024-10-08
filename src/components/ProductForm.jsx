@@ -96,17 +96,17 @@ function ProductForm() {
   };
 
   return (
-    <div className="form-container">
+    <div className="flex justify-center items-center min-h-screen w-full">
       <form
-        className="bg-transparent shadow-md rounded-md px-8 pt-6 pb-8 mb-4"
+        className="justify-center  items-center bg-white shadow-md rounded-md px-8 pt-6 pb-8 mb-4 w-full max-w-md"
         onSubmit={handleSubmit}
         ref={form}
       >
-        <h2 className="text-lg font-bold mb-4 text-center text-white">
+        <h2 className="text-lg font-bold mb-4 text-center text-black">
           {params.id ? "Actualizar Producto" : "Crear Producto"}
         </h2>
 
-        <label className="block text-yellow-400 font-bold mb-2" htmlFor="name">
+        <label className="block text-black font-bold mb-2" htmlFor="name">
           Nombre del Producto
         </label>
         <input
@@ -114,12 +114,12 @@ function ProductForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
           required
         />
 
         <label
-          className="block text-yellow-400 font-bold mb-2"
+          className="block text-black font-bold mb-2"
           htmlFor="description"
         >
           Descripción
@@ -128,11 +128,11 @@ function ProductForm() {
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
           required
         />
 
-        <label className="block text-yellow-400 font-bold mb-2" htmlFor="grams">
+        <label className="block text-black font-bold mb-2" htmlFor="grams">
           Gramos Disponibles
         </label>
         <input
@@ -140,14 +140,11 @@ function ProductForm() {
           name="grams"
           value={formData.grams}
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
           required
         />
 
-        <label
-          className="block text-yellow-400 font-bold mb-2"
-          htmlFor="portions"
-        >
+        <label className="block text-black font-bold mb-2" htmlFor="portions">
           Gramos por Porción
         </label>
         <input
@@ -155,12 +152,12 @@ function ProductForm() {
           name="portions"
           value={formData.portions}
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
           required
         />
 
         <label
-          className="block text-yellow-400 font-bold mb-2"
+          className="block text-black font-bold mb-2"
           htmlFor="pricePerPortion"
         >
           Precio por Porción
@@ -170,41 +167,42 @@ function ProductForm() {
           name="pricePerPortion"
           value={formData.pricePerPortion}
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
           required
         />
 
-        <label className="block text-yellow-400 font-bold mb-2" htmlFor="image">
+        <label className="block text-black font-bold mb-2" htmlFor="image">
           Imagen
         </label>
         <input
           type="file"
           name="image"
           onChange={handleChange}
-          className="border border-yellow-400 rounded w-full py-2 px-3 mb-4 bg-gray-800 text-white"
+          className="border border-gray-300 rounded w-full py-2 px-3 mb-4 bg-gray-100 text-black"
         />
 
         {/* Vista previa de la imagen */}
         {imagePreview && (
           <div className="mt-4">
-            <h3 className="text-yellow-400 font-bold">
-              Vista previa de la imagen:
-            </h3>
+            <h3 className="text-black font-bold">Vista previa de la imagen:</h3>
             <img
               src={imagePreview}
               alt="Vista previa"
-              className="w-full h-auto border border-yellow-400 rounded mt-2"
+              className="w-full h-auto border border-gray-300 rounded mt-2"
             />
           </div>
         )}
 
         {/* Mostrar la cantidad de porciones disponibles y el valor total */}
-        <div className="mt-4 text-white">
+        <div className="mt-4 text-black">
           <p>Cantidad de Porciones Disponibles: {calculatePortions()}</p>
           <p>Valor Total: ${calculateTotalValue().toFixed(2)}</p>
         </div>
 
-        <button type="submit" className="btn w-full mt-4">
+        <button
+          type="submit"
+          className="bg-black text-white font-bold py-2 px-4 rounded w-full mt-4 hover:bg-orange-500 transition-colors duration-300"
+        >
           {params.id ? "Actualizar" : "Crear"}
         </button>
       </form>
